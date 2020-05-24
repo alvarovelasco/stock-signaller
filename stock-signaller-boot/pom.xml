@@ -8,7 +8,6 @@
 		<artifactId>stock-signaller</artifactId>
 		<version>1.0</version>
 	</parent>
-	<groupId>com.finance</groupId>
 	<artifactId>stock-signaller-boot</artifactId>
 	<version>0.0.1</version>
 	<name>stock-signaller-boot</name>
@@ -84,6 +83,7 @@
 	</dependencies>
 
 	<build>
+	 	<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -95,7 +95,7 @@
 				<configuration>
 					<mainClass>com.finance.stocksignaller.StockSignallerApplication</mainClass>
 					<fork>true</fork>
-					<skip>false</skip>
+					<skip>false</skip>					
 				</configuration>
 			</plugin>
 		</plugins>
