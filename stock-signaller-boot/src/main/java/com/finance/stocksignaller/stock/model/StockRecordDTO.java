@@ -7,6 +7,12 @@ public final class StockRecordDTO implements Serializable {
 	private String symbol;
 
 	private String name;
+	
+	/**
+	 * To avoid Jackson error for no default constructor found
+	 */
+	public StockRecordDTO() {
+	}
 
 	public StockRecordDTO(String symbol, String name) {
 		this.symbol = symbol.toUpperCase();
@@ -20,7 +26,6 @@ public final class StockRecordDTO implements Serializable {
 	public String getName() {
 		return name;
 	}
-	
 
 	public void setSymbol(String symbol) {
 		this.symbol = symbol;

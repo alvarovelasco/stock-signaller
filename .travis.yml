@@ -4,7 +4,7 @@ matrix:
                 jdk:
                         - openjdk11
                 services: mongodb
-                before_install: cd stock-signaller
+                before_install: cd stock-signaller-boot
                 script: 
                         - mvn compile
                         - mvn test -B
