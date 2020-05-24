@@ -1,0 +1,10 @@
+matrix:
+        include:
+                language: java
+                jdk:
+                        - openjdk11
+                services: mongodb
+                before_install: cd stock-signaller
+                script: 
+                        - mvn compile
+                        - mvn test -B
