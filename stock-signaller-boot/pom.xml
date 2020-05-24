@@ -12,6 +12,7 @@
 	<artifactId>stock-signaller-boot</artifactId>
 	<version>0.0.1</version>
 	<name>stock-signaller-boot</name>
+	<packaging>jar</packaging>
 	<description>Project to send different type of stock signals</description>
 
 	<properties>
@@ -85,14 +86,17 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-
-			</plugin>
-			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
-				
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.finance.stocksignaller.StockSignallerApplication</mainClass>
+					<fork>true</fork>
+					<skip>false</skip>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

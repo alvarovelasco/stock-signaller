@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 
 import com.finance.stocksignaller.stock.model.StockRecord;
 
-@Repository
+@Repository("queryRepo")
 public class QueryRepositoryImpl implements QueryRepository {
 
 	@Autowired

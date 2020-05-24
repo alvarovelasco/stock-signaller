@@ -5,18 +5,22 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.finance.stocksignaller.stock.model.StockRecord;
 
 @Repository("rawCustomStockRepository")
+@Primary
 public class CustomStockRecordRepositoryImpl implements CustomStockRecordRepository {
 
 	@Autowired
 	private MongoTemplate mongoTemplate;
 
 	@Autowired
+	@Qualifier("queryRepo")
 	private QueryRepository queryRepository;
 
 	@Override
