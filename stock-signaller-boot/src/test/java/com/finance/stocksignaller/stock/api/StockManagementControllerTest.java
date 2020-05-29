@@ -20,6 +20,8 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.internal.verification.VerificationModeFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
@@ -31,9 +33,11 @@ import com.finance.stocksignaller.stock.repo.CustomStockRecordRepository;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(StockManagementController.class)
+@AutoConfigureMockMvc
 public class StockManagementControllerTest {
 
 	@MockBean
+	@Qualifier("rawStockRecordRepository")
 	private CustomStockRecordRepository customStockRecordRepository;
 
 	@Autowired
