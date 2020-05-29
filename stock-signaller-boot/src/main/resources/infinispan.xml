@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infinispan xmlns="urn:infinispan:config:7.2">
+ 
+  <cache-container default-cache="default">
+  	<local-cache-configuration name="local-template"> 
+         <expiration interval="300000" lifespan="14400000" max-idle="1000"/>
+      </local-cache-configuration>
+    <local-cache name="stocks" configuration="local-template">
+    </local-cache>
+    <local-cache name="resolution" configuration="local-template">
+    	<memory>
+            <object size="2000"/>
+         </memory>
+    </local-cache>
+  </cache-container>
+</infinispan>

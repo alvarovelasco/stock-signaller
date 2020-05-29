@@ -37,7 +37,7 @@ import com.finance.stocksignaller.stock.repo.CustomStockRecordRepository;
 public class StockManagementControllerTest {
 
 	@MockBean
-	@Qualifier("rawStockRecordRepository")
+	@Qualifier("stockRecordRepository")
 	private CustomStockRecordRepository customStockRecordRepository;
 
 	@Autowired
