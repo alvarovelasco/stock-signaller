@@ -16,7 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
-		<org.springframework.boot.version>2.3.0.RELEASE</org.springframework.boot.version>
+		<org.springframework.boot.version>2.5.12</org.springframework.boot.version>
 	</properties>
 
 	<dependencies>
